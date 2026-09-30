@@ -1,0 +1,416 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+ATR | Home
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <p class="hero-label">
+            DISCOVER • EXPERIENCE • CONNECT
+        </p>
+
+        <h1>
+            Explore Nepal
+
+            <br>
+
+            <span>Through ATR</span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Discover beautiful destinations,
+            comfortable stays, agriculture experiences
+            and valuable local resources all in one place.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="{% url 'hotels' %}" class="primary-button">
+                Find a Hotel
+            </a>
+
+
+            <a href="{% url 'tourism' %}" class="secondary-button">
+                Explore Tourism
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="hotel-search">
+
+    <div class="container">
+
+        <div class="search-box">
+
+            <div class="search-heading">
+
+                <h2>
+                    Your Perfect Stay Awaits
+                </h2>
+
+                <p>
+                    Search hotels and plan your next trip.
+                </p>
+
+            </div>
+
+
+            <form class="search-form">
+
+                <div class="form-group">
+
+                    <label>
+                        Destination
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Place your destination "
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Check-in
+                    </label>
+
+                    <input type="date">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Check-out
+                    </label>
+
+                    <input type="date">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Guests
+                    </label>
+
+                    <select>
+
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                        <option>5 Guests</option>
+                        <option>more Guests</option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="search-button"
+                >
+                    Search
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ATR CATEGORIES -->
+
+<section class="categories">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p>
+                WHAT WE OFFER
+            </p>
+
+            <h2>
+                Explore ATR
+            </h2>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <!-- AGRICULTURE -->
+
+            <div class="category-card">
+
+                  <div class="agriculture-image">
+                       <img
+                      src="{% static 'images/agriculture.jpg' %}"
+                      alt="Agriculture in Nepal"
+                        >
+                 </div>
+
+                <div class="agriculture-info">
+
+                  <h3>
+                     Agriculture
+                  </h3>
+
+                     <p>
+                      Discover Nepal's farms, fresh agricultural products,
+                      local producers, and traditional farming practices.
+                    </p>
+
+                 <a href="{% url 'agriculture' %}">
+                    Explore Agriculture →
+                 </a>
+
+             </div>
+
+         </div>
+
+
+           <!-- TOURISM -->
+
+<div class="category-card">
+
+    <div class="home-tourism-image">
+        <img
+            src="{% static 'images/tourism.jpg' %}"
+            alt="Tourism in Nepal"
+        >
+    </div>
+
+    <div class="home-tourism-info">
+
+        <h3>
+            Tourism
+        </h3>
+
+        <p>
+            Discover beautiful destinations,
+            experiences and attractions.
+        </p>
+
+        <a href="{% url 'tourism' %}">
+            Explore Tourism →
+        </a>
+
+    </div>
+
+</div>
+
+
+            <!-- RESORTS -->
+
+<div class="category-card">
+
+    <div class="resort-image">
+        <img
+            src="{% static 'images/resort.jpg' %}"
+            alt="Resorts in Nepal"
+        >
+    </div>
+
+    <div class="resort-info">
+
+        <h3>
+            Resort
+        </h3>
+
+        <p>
+            Find useful information,
+            guides and local resources.
+        </p>
+
+        <a href="{% url 'resorts' %}">
+            View Resorts →
+        </a>
+
+    </div>
+
+</div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- POPULAR HOTELS -->
+
+<section class="popular-hotels">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p>
+                STAY WITH COMFORT
+            </p>
+
+            <h2>
+                Popular Hotels
+            </h2>
+
+            <span>
+                Discover comfortable places to stay
+                during your journey.
+            </span>
+
+        </div>
+
+
+        <div class="hotel-grid">
+
+
+            <div class="hotel-card">
+
+                <div class="hotel-image">
+
+                    <div class="image-placeholder">
+                        Hotel Image
+                    </div>
+
+                </div>
+
+
+                <div class="hotel-info">
+
+                    <span class="hotel-location">
+                        Kathmandu, Nepal
+                    </span>
+
+                    <h3>
+                        Hotel Example
+                    </h3>
+
+                    <p>
+                        Comfortable rooms with modern facilities.
+                    </p>
+
+                    <a href="{% url 'hotels' %}">
+                        View Hotel →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hotel-card">
+
+                <div class="hotel-image">
+
+                    <div class="image-placeholder">
+                        Hotel Image
+                    </div>
+
+                </div>
+
+
+                <div class="hotel-info">
+
+                    <span class="hotel-location">
+                        Pokhara, Nepal
+                    </span>
+
+                    <h3>
+                        Mountain View Hotel
+                    </h3>
+
+                    <p>
+                        Enjoy beautiful views and peaceful surroundings.
+                    </p>
+
+                    <a href="{% url 'hotels' %}">
+                        View Hotel →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hotel-card">
+
+                <div class="hotel-image">
+
+                    <div class="image-placeholder">
+                        Hotel Image
+                    </div>
+
+                </div>
+
+
+                <div class="hotel-info">
+
+                    <span class="hotel-location">
+                        Chitwan, Nepal
+                    </span>
+
+                    <h3>
+                        Jungle Resort
+                    </h3>
+
+                    <p>
+                        Experience nature and local hospitality.
+                    </p>
+
+                    <a href="{% url 'hotels' %}">
+                        View Hotel →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}

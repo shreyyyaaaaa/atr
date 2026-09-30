@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+ATR | Booking Successful
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-content">
+
+    <div class="container">
+
+        <div class="booking-success">
+
+            <h1>
+                Booking Request Submitted
+            </h1>
+
+            <p>
+                Your hotel booking request has been submitted successfully.
+            </p>
+
+            <p>
+                The hotel will review your request and contact you
+                regarding confirmation.
+            </p>
+
+            <br>
+
+            <a
+                href="{% url 'tourism' %}"
+                class="primary-button"
+            >
+                Back to Tourism
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

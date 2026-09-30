@@ -1,0 +1,252 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+ATR | Hotels
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hotel-listing">
+
+    <!-- Background Image -->
+    <div class="hotel-hero-image">
+        <img
+            src="{% static 'images/hotell.jpg' %}"
+            alt="Beautiful hotel in Nepal"
+        >
+    </div>
+
+    <div class="container">
+
+        <!-- SEARCH BOX -->
+
+        <div class="search-box">
+
+            <h2>
+                Search Hotels
+            </h2>
+
+            <form class="search-form">
+
+                <div class="form-group">
+
+                    <label>
+                        Destination
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Kathmandu, Pokhara..."
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Check-in
+                    </label>
+
+                    <input type="date">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Check-out
+                    </label>
+
+                    <input type="date">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Guests
+                    </label>
+
+                    <select>
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                    </select>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="search-button"
+                >
+                    Search
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <!-- HOTEL LIST -->
+
+        <div class="hotel-grid">
+
+
+            <!-- YAK & YETI -->
+
+            <div class="hotel-card">
+
+                <div class="hotel-image">
+
+                    <img
+                        src="{% static 'images/yak and yeti.jpg' %}"
+                        alt="Hotel Yak & Yeti Kathmandu"
+                    >
+
+                </div>
+
+
+                <div class="hotel-info">
+
+                    <span class="hotel-location">
+                        Kathmandu
+                    </span>
+
+                    <h3>
+                        Hotel Yak & Yeti
+                    </h3>
+
+                    <p>
+                        A luxury heritage hotel in the heart of Kathmandu.
+                    </p>
+
+                    <strong>
+                        Luxury Hotel
+                    </strong>
+
+                    <br><br>
+
+                    <a
+                        href="https://www.yakandyeti.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Visit Hotel
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEMPLE TREE -->
+
+            <div class="hotel-card">
+
+                <div class="hotel-image">
+
+                    <img
+                        src="{% static 'images/temple tree.jpg' %}"
+                        alt="Temple Tree Resort Pokhara"
+                    >
+
+                </div>
+
+
+                <div class="hotel-info">
+
+                    <span class="hotel-location">
+                        Pokhara
+                    </span>
+
+                    <h3>
+                        Temple Tree Resort & Spa
+                    </h3>
+
+                    <p>
+                        A peaceful resort surrounded by the natural beauty of Pokhara.
+                    </p>
+
+                    <strong>
+                        Resort & Spa
+                    </strong>
+
+                    <br><br>
+
+                    <a
+                        href="https://www.templetreenepal.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Visit Hotel
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Oasis Kathmandu Hotel -->
+             <div class="hotel-card">
+
+                <div class="hotel-image">
+
+                    <img
+                        src="{% static 'images/oasis kathmandu.jpg' %}"
+                        alt="Oasis Kathmandu Hotel"
+                    >
+
+                </div>
+
+
+                <div class="hotel-info">
+
+                    <span class="hotel-location">
+                        Kathmandu
+                    </span>
+
+                    <h3>
+                        Oasis Kathmandu Hotel
+                    </h3>
+
+                    <p>
+                        Oasis Kathmandu Hotel, attached with the Garden of Dream.
+                    </p>
+
+                    <strong>
+                        Boutique Hotel
+                    </strong>
+
+                    <br><br>
+
+                    <a
+                        href="http://www.oasiskathmanduhotel.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Visit Hotel
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

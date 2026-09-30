@@ -1,0 +1,243 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block title %}
+ATR | Tourism
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-header">
+
+    <div class="container">
+
+        <h1>
+            Tourism
+        </h1>
+
+        <p>
+            Discover beautiful destinations and experiences in Nepal.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="page-content">
+
+    <div class="container">
+
+        <h2>
+            Explore Nepal
+        </h2>
+
+        <p>
+            Discover mountains, cultural destinations,
+            natural attractions and unforgettable experiences.
+        </p>
+
+
+        <div class="category-grid">
+
+
+            <div class="category-card">
+
+             <div class="category-image">
+    <img
+    src="{% static 'images/dhorpatan.webp' %}"
+    alt="Dhorpatan"
+
+    >
+</div>
+
+<div class="category-info">
+    <span class="hotel-location">
+        Baglung, Nepal
+    </span>
+
+    <h3>
+        Dhorpatan
+    </h3>
+
+    <p>
+        Dhorpatan is a beautiful destination known for its stunning
+        Himalayan landscapes, wildlife, trekking trails, and peaceful
+        natural environment.
+    </p>
+
+    <strong>
+        Tourism Destination
+    </strong>
+
+    <br><br>
+
+    <a
+        href="https://ntb.gov.np/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="primary-button"
+    >
+        Explore Dhorpatan
+    </a>
+</div>
+
+
+            </div>
+
+<!-- Pokhara -->
+<div class="category-card">
+
+    <div class="category-image">
+        <img
+            src="{% static 'images/pokhara.jpg' %}"
+            alt="Pokhara"
+        >
+    </div>
+
+    <div class="category-info">
+
+        <span class="hotel-location">
+            Gandaki Province, Nepal
+        </span>
+
+        <h3>Pokhara</h3>
+
+        <p>
+            Pokhara is a beautiful tourist destination known for
+            Phewa Lake, stunning mountain views, caves, waterfalls,
+            and adventure activities.
+        </p>
+
+        <strong>
+            Tourism Destination
+        </strong>
+
+        <br><br>
+
+        <a
+            href="https://ntb.gov.np/pokhara"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="primary-button"
+        >
+            Explore Pokhara
+        </a>
+
+    </div>
+
+</div>
+
+
+            <div class="category-card">
+
+    <div class="category-image">
+        <img
+            src="{% static 'images\Mustang.webp' %}"
+            alt="Mustang"
+        >
+    </div>
+
+    <div class="category-info">
+
+        <span class="hotel-location">
+            Gandaki Province, Nepal
+        </span>
+
+        <h3>Mustang</h3>
+
+        <p>
+            Mustang is a spectacular Himalayan destination famous
+            for its dramatic landscapes, ancient monasteries,
+            traditional villages, and unique Tibetan-influenced culture.
+        </p>
+
+        <strong>
+            Tourism Destination
+        </strong>
+
+        <br><br>
+
+        <a
+            href="https://ntb.gov.np/mustang"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="primary-button"
+        >
+            Explore Mustang
+        </a>
+
+    </div>
+
+</div>
+
+
+        </div>
+        <h2>
+            Our Hotels
+        </h2>
+
+        <div class="category-grid">
+
+            {% for hotel in hotels %}
+
+                <div class="category-card">
+
+                    <div class="category-image">
+
+                        {% if hotel.image %}
+                        <img
+                            src="{{ hotel.image.url }}"
+                            alt="{{ hotel.name }}"
+                        >
+                        {% else %}
+                        <img
+                            src="{% static 'images/pokhara.jpg' %}"
+                            alt="{{ hotel.name}}"
+                        >
+                        {% endif %}
+                    </div>
+
+                    <div class="category-info">
+
+                        <span class="hotel-location">
+                            {{ hotel.location }}
+                        </span>
+
+                        <h3>{{ hotel.name }}</h3>
+
+                        <p>
+                            {{ hotel.description }}
+                        </p>
+                        {% if hotel.phone %}
+
+                        <strong>
+                            Contact : {{ hotel.phone }}
+                        </strong>
+
+                        {% endif %}
+
+                        <a 
+                           href="{% url 'hotel_detail' hotel.id %}"
+                           class = "primary-button"
+                        >
+                          View Hotel
+                    </a>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+                <p>
+                    No hotels are currently available.
+                </p>
+            {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

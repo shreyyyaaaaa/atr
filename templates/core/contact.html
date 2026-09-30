@@ -1,0 +1,110 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+ATR | Contact
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-header">
+
+    <div class="container">
+
+        <h1>
+            Contact Us
+        </h1>
+
+        <p>
+            Get in touch with ATR.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="page-content">
+
+    <div class="container">
+
+        <h2>
+            Contact Information
+        </h2>
+
+        <p>
+            Email: info@atr.com
+        </p>
+
+        <p>
+            Phone: +977 98XXXXXXXX
+        </p>
+
+        <p>
+            Location: Nepal
+        </p>
+
+
+        <h2>
+            Send Us a Message
+        </h2>
+
+
+        <form>
+
+            <div class="form-group">
+
+                <label>
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Your name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="Your email"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Message
+                </label>
+
+                <textarea
+                    rows="5"
+                    placeholder="Your message"
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="search-button"
+            >
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

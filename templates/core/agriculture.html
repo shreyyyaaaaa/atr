@@ -1,0 +1,106 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+ATR | Agriculture
+{% endblock %}
+
+{% block content %}
+
+<!-- AGRICULTURE HERO -->
+
+<section class="agriculture-hero">
+
+    <img
+        src="{% static 'images/agriculture.jpg' %}"
+        alt="Agriculture and farming in Nepal"
+    >
+
+    <div class="agriculture-hero-text">
+
+        <h1>Agriculture</h1>
+
+        <p>
+            Discover Nepal's agricultural products,
+            farms and farming opportunities.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- AGRICULTURE CONTENT -->
+
+<section class="page-content">
+<div class="container">
+
+    <h2>
+        Explore Agriculture
+    </h2>
+
+    <p>
+        ATR provides information about local agriculture,
+        farmers, agricultural products and farming activities.
+    </p>
+
+
+    <div class="category-grid">
+
+        <div class="category-card">
+
+            <div class="category-icon">
+                🌾
+            </div>
+
+            <h3>
+                Local Products
+            </h3>
+
+            <p>
+                Discover locally produced agricultural products.
+            </p>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">
+                🚜
+            </div>
+
+            <h3>
+                Farms
+            </h3>
+
+            <p>
+                Explore farms and agricultural activities.
+            </p>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">
+                🌱
+            </div>
+
+            <h3>
+                Farming
+            </h3>
+
+            <p>
+                Learn about farming and sustainable agriculture.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+ATR | Hotel Details
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-content">
+
+    <div class="container">
+
+
+        <div class="hotel-detail">
+
+
+            <div class="hotel-detail-image">
+
+                {% if hotel.image %}
+                    <img
+                       src="{{ hotel.image.url }}"
+                       alt="{{ hotel.name }}"
+                    >
+                {% else %}
+
+                <div class="image-placeholder">
+                    Hotel Image
+                </div>
+                {% endif %}
+
+            </div>
+
+            <div class="hotel-detail-info">
+
+                <span class="hotel-location">
+                    {{ hotel.location}}
+                </span>
+
+                <h1>
+                    {{ hotel.name }}
+                </h1>
+
+                <p>
+                    {{ hotel.description }}
+                </p>
+
+
+                <h3>
+                    Contact
+                </h3>
+                {% if hotel.phone %}
+                <p>
+                    {{ hotel.phone}}
+                </p>
+                {% endif %}
+                {% if hotel.contact_email %}
+                <p>
+                    {{ hotel.contact_email}}
+                </p>
+                {% endif %}
+                <h2>
+                    Available Rooms
+                </h2>
+
+                {% for room in rooms %}
+                <div class= "room-info">
+                    <h3>
+                        {{ room.room_type }}
+                    </h3>
+                    <p>
+                        Room Number: {{ room.room_number }}
+                    </p>
+
+                    <p>
+                        {{ room.description }}
+                    </p>
+
+                    <p>
+                        Capacity: {{room.capacity }} guests
+                    </p>
+
+                    <p>
+                        <strong>
+                            NPR {{ room.price }} / night
+                        </strong>
+                    </p>
+
+                    <p>
+                        Facilities: {{ room.facilities }}
+                    </p>
+
+                    {% if room.is_available %}
+                    <strong>
+                        Available
+                    </strong>
+
+                    <br><br>
+                    <a
+                        href="{% url 'booking' %}"
+                        class="primary-button"
+                    >
+                        Book This Room
+                    </a>
+
+                    {% else %}
+                    <strong>
+                        Currently Unavailable
+                    </strong>
+
+                    {% endif %}
+               </div>
+
+               <br>
+               {% empty %}
+               <p>
+                 No rooms are currently available.
+               </p>
+               {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

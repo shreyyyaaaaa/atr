@@ -1,0 +1,273 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}ATR | Agriculture • Tourism • Resorts{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="{% url 'home' %}" class="logo">
+
+                <span class="logo-main">ATR</span>
+
+                <span class="logo-sub">
+                    Agriculture • Tourism • Resorts
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a href="{% url 'home' %}">
+                    Home
+                </a>
+
+                <a href="{% url 'agriculture' %}">
+                    Agriculture
+                </a>
+
+                <a href="{% url 'tourism' %}">
+                    Tourism
+                </a>
+
+                <a href="{% url 'resorts' %}">
+                    Resorts
+                </a>
+
+                <a href="{% url 'hotels' %}">
+                    Hotels
+                </a>
+
+                <a href="{% url 'about' %}">
+                    About
+                </a>
+
+                <a href="{% url 'contact' %}">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <a href="{% url 'hotels' %}" class="nav-button">
+                Book Hotel
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- PAGE CONTENT -->
+
+    <main>
+
+        {% block content %}
+
+        {% endblock %}
+
+    </main>
+
+
+    <!-- FOOTER -->
+<footer>
+
+    <div class="container footer-container">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <h2>ATR</h2>
+
+            <p>
+                Agriculture • Tourism • Resorts
+            </p>
+
+            <p>
+                Connecting people, places and opportunities.
+            </p>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+        <div class="footer-links">
+
+            <h3>Explore</h3>
+
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+
+            <a href="{% url 'agriculture' %}">
+                Agriculture
+            </a>
+
+            <a href="{% url 'tourism' %}">
+                Tourism
+            </a>
+
+            <a href="{% url 'resorts' %}">
+                Resorts
+            </a>
+
+            <a href="{% url 'hotels' %}">
+                Hotels
+            </a>
+
+            <a href="{% url 'gallery' %}">
+                Gallery
+            </a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-links">
+
+            <h3>Company</h3>
+
+            <a href="{% url 'about' %}">
+                About Us
+            </a>
+
+            <a href="{% url 'contact' %}">
+                Contact Us
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+
+        <!-- GALLERY -->
+        <div class="footer-links">
+
+            <h3>Gallery</h3>
+
+            <a href="{% url 'gallery' %}">
+                Tourism Gallery
+            </a>
+
+            <a href="{% url 'gallery' %}">
+                Agriculture Gallery
+            </a>
+
+            <a href="{% url 'gallery' %}">
+                Hotel Gallery
+            </a>
+
+            <a href="{% url 'gallery' %}">
+                View All Photos
+            </a>
+
+        </div>
+
+
+        <!-- FIND US / MAP -->
+        <div class="footer-links">
+
+            <h3>Find Us</h3>
+
+            <p>
+                Kathmandu, Nepal
+            </p>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Kathmandu,Nepal"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                📍 View on Map
+            </a>
+
+            <p>
+                Email: info@atr.com
+            </p>
+
+            <p>
+                Phone: +977 98XXXXXXXX
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+
+        <div class="container">
+
+            <div class="newsletter-content">
+
+                <div>
+                    <h3>Stay Connected with ATR</h3>
+
+                    <p>
+                        Subscribe to receive updates about tourism,
+                        agriculture, hotels, and new opportunities.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 ATR. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1406 @@
+/* =========================================================
+   ATR WEBSITE - GLOBAL STYLES
+   Agriculture • Tourism • Resources
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #26352b;
+    background: #f8faf6;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e9e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-size: 30px;
+    font-weight: 800;
+    color: #2f6b3a;
+}
+
+.logo-sub {
+    font-size: 9px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-menu a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #354238;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #2f7d45;
+}
+
+.nav-button {
+    background: #2f6b3a;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #24562e;
+}
+
+
+/* =========================================================
+   HERO - HOME PAGE
+========================================================= */
+
+.hero {
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(10, 36, 19, 0.72),
+            rgba(10, 36, 19, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: rgb(161, 152, 49);
+    padding: 100px 0;
+}
+
+.hero-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #355b10;
+}
+
+.hero-description {
+    max-width: 620px;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: #6b8e45;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #1c3405;
+}
+
+.secondary-button {
+    border: 1px solid white;
+    color: white;
+}
+
+.secondary-button:hover {
+    background: white;
+    color: #2f6b3a;
+}
+
+
+/* =========================================================
+   HOTEL SEARCH
+========================================================= */
+
+.hotel-search {
+    margin-top: -50px;
+    position: relative;
+    z-index: 5;
+}
+
+.search-box {
+    background: white;
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.search-heading {
+    margin-bottom: 20px;
+}
+
+.search-heading h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.search-heading p {
+    color: #777;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr auto;
+    gap: 12px;
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #59635a;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #dce2dc;
+    border-radius: 5px;
+    padding: 12px;
+    background: white;
+    color: #26352b;
+    outline: none;
+}
+
+.form-group input,
+.form-group select {
+    height: 45px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6b8e45;
+}
+
+.search-button {
+    height: 45px;
+    border: none;
+    background: #2f6b3a;
+    color: white;
+    padding: 0 22px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    background: #24562e;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.categories,
+.popular-hotels {
+    padding: 100px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading p,
+.section-label {
+    color: #6b8e45;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    color: #263d2c;
+    margin-bottom: 10px;
+}
+
+.section-heading span {
+    color: #777;
+}
+
+
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+/* ========================================
+   Home Page - Agriculture 
+   ======================================== */
+   .category-card.agriculture-image,
+   .category-card .home-tourism-image  {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+     /* position: relative; */
+}
+
+.category-card .home-tourism-image img , 
+.category-card .agriculture-image img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    display: block;
+    object-position: center;
+    border-radius: 20px 20px 0 0;
+    background-color: #f5f5f5;
+}
+
+.agriculture-info {
+    padding: 22px;
+}
+
+.agriculture-info h3 {
+    color: #1f3025;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.agriculture-info p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.agriculture-info a {
+    color: #2f6b3a;
+    text-decoration: none;
+    font-weight: 600;
+}
+.agriculture-info a:hover {
+    color: #6b8e45;
+}
+/* ========================================
+   Home Page - Tourism 
+   ======================================== */
+/* .category-card .tourism-image {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+} */
+/* .category-card .tourism-image img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 20px 20px 0 0;
+    background-color: #f5f5f5;
+} */
+
+.home-tourism-info {
+    padding: 22px;
+}
+
+.home-tourism-info h3 {
+    color: #1f3025;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.home-tourism-info p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.home-tourism-info a {
+    color: #2f6b3a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.home-tourism-info a:hover {
+    color: #6b8e45;
+}
+.resort-image {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.resort-image img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.resort-info {
+    padding: 22px;
+}
+
+.resort-info h3 {
+    color: #1f3025;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.resort-info p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.resort-info a {
+    color: #2f6b3a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.resort-info a:hover {
+    color: #6b8e45;
+}
+
+
+/* ========================================
+   TOURISM DESTINATION CARDS
+======================================== */
+.category-card img{
+    max-height: 120px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.category-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   DESTINATION IMAGE
+======================================== */
+
+.category-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    /* display:block; */
+}
+
+.category-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   TOURISM page INFORMATION
+======================================== */
+
+.category-info {
+    padding: 8px 12px ;
+    margin:0;
+}
+
+.hotel-location {
+    display: inline-block;
+    color: #6b8e45;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.category-info h3 {
+    color: #1f3025;
+    font-size: 25px;
+    /* margin: 5px 0 12px; */
+    font-weight: 700;
+    margin-top: 10;
+    margin-bottom: 10px;
+}
+
+.category-info p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.category-info strong {
+    color: #2f6b3a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   EXPLORE BUTTON
+======================================== */
+
+.category-info .primary-button {
+    display: inline-block;
+    background: #2f6b3a;
+    color: #ffffff;
+    padding: 11px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.category-info .primary-button:hover {
+    background: #1f3025;
+    transform: translateY(-2px);
+}
+/* =========================================================
+   Agriculture Page
+========================================================= */
+
+/* =========================
+   AGRICULTURE HERO
+========================= */
+
+.agriculture-hero {
+    position: relative;
+    width: 100%;
+    height: 300%;
+    overflow: hidden;
+}
+
+/* Hero image */
+.agriculture-hero img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    display: block;
+}
+
+/* Dark overlay */
+.agriculture-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.40);
+
+    z-index: 1;
+}
+
+/* Text inside image */
+.agriculture-hero-text {
+    position: absolute;
+
+    top: 50%;
+    left: 6%;
+
+    transform: translateY(-50%);
+
+    width: 500px;
+
+    color: white;
+
+    z-index: 2;
+}
+
+/* Title */
+.agriculture-hero-text h1 {
+    color: white;
+
+    font-size: 56px;
+    font-weight: 700;
+
+    margin: 0 0 15px 0;
+}
+
+/* Description */
+.agriculture-hero-text p {
+    color: white;
+
+    font-size: 20px;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================
+   AGRICULTURE CONTENT
+========================= */
+
+.page-content {
+    padding: 70px 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.category-card {
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+}
+/* ========================================
+   tourism page RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 992px) {
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .category-image {
+        height: 230px;
+    }
+
+    .category-info {
+        padding: 20px;
+    }
+
+    .category-info h3 {
+        font-size: 22px;
+    }
+
+}
+
+/* =========================================================
+   POPULAR HOTELS
+========================================================= */
+
+.hotel-listing {
+    padding-top: 0;
+    position:relative;
+    margin-top: -100px;
+}
+.hotel-hero-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin: 0;
+    padding:0;
+}
+
+.hotel-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hotel-listing .container {
+    position: relative;
+}
+
+.search-box {
+    position: relative;
+    margin-top: -140px;
+    z-index: 2;
+}
+
+.popular-hotels {
+    background: #eef3eb;
+}
+
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: -50px;
+    margin-bottom: 50px;
+    gap: 25px;
+}
+
+.hotel-card {
+    /* flex: 0 0 calc((100% - 50px) / 3); */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e1e7df;
+    transition: 0.3s;
+
+    /* animation: hotelSlide 15s linear infinite; */
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* .hotel-grid:hover .hotel-card {
+    animation-play-state: paused;
+} */
+
+/* @keyframes hotelSlide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-200% - 50px));
+    }
+} */
+
+/* for moblie */
+/* @media (max-width: 768px) {
+    .hotel-card {
+        flex: 0 0 85%;
+    }
+
+    .hotel-grid {
+        gap: 15px;
+    }
+} */
+
+.hotel-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dce7d8;
+    color: #607060;
+    font-weight: 700;
+}
+
+.hotel-info {
+    padding: 22px;
+}
+
+.hotel-location {
+    font-size: 12px;
+    color: #6b8e45;
+    font-weight: 700;
+}
+
+.hotel-info h3 {
+    font-size: 21px;
+    margin: 8px 0;
+}
+
+.hotel-info p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hotel-info strong {
+    color: #2f6b3a;
+}
+
+.hotel-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hotel-bottom strong {
+    color: #2f6b3a;
+}
+
+.hotel-bottom a {
+    color: #2f6b3a;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GENERAL PAGE HEADER
+   Used by Agriculture, Tourism, Resources,
+   Hotels, About and Contact
+========================================================= */
+
+.page-header {
+    background:
+        linear-gradient(
+            rgba(31, 60, 40, 0.88),
+            rgba(31, 60, 40, 0.88)
+        );
+
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+    color: #dce7dc;
+}
+
+
+/* =========================================================
+   GENERAL PAGE CONTENT
+========================================================= */
+
+.page-content {
+    padding: 80px 0;
+    background: #f8faf6;
+}
+
+.page-content h2 {
+    font-size: 34px;
+    color: #263d2c;
+    margin-bottom: 20px;
+}
+
+.page-content h3 {
+    color: #263d2c;
+}
+
+.page-content p {
+    color: #687168;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   HOTEL LISTING PAGE
+========================================================= */
+
+.hotel-listing {
+    padding: 70px 0 100px;
+}
+
+.hotel-listing .search-box {
+    margin-bottom: 50px;
+}
+
+.hotel-listing .hotel-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* =========================================================
+   HOTEL DETAIL PAGE
+========================================================= */
+
+.hotel-detail {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: start;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e4e9e3;
+}
+
+.hotel-detail-image {
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hotel-detail-info {
+    padding: 15px 0;
+}
+
+.hotel-detail-info h1 {
+    font-size: 40px;
+    color: #263d2c;
+    margin: 10px 0 20px;
+}
+
+.hotel-detail-info h2 {
+    font-size: 28px;
+    color: #2f6b3a;
+    margin: 25px 0;
+}
+
+.hotel-detail-info h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.hotel-detail-info ul {
+    margin: 15px 0 25px 20px;
+    color: #687168;
+}
+
+.hotel-detail-info li {
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   BOOKING PAGE
+========================================================= */
+
+.booking-form {
+    max-width: 750px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #e4e9e3;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.booking-form .search-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+.page-content form {
+    max-width: 750px;
+    margin-top: 30px;
+}
+
+.page-content form .search-button {
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.about {
+    padding: 100px 0;
+    background: white;
+}
+
+.about-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-content {
+    max-width: 650px;
+}
+
+.about-content h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    color: #69726b;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #1f3025;
+    color: #ffffff;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1.3fr;
+    gap: 35px;
+    padding: 55px 0;
+}
+
+
+/* BRAND */
+
+.footer-brand h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: #cbd5cc;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links h3 {
+    color: #ffffff;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.footer-links a {
+    color: #cbd5cc;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 11px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #8fbd6b;
+    padding-left: 3px;
+}
+
+.footer-links p {
+    color: #cbd5cc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 9px;
+}
+
+
+/* ========================================
+   NEWSLETTER
+======================================== */
+
+.footer-newsletter {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 30px 0;
+}
+
+.newsletter-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.newsletter-content h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.newsletter-content p {
+    color: #cbd5cc;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    display: flex;
+    min-width: 380px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 13px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+}
+
+.newsletter-form button {
+    padding: 13px 20px;
+    border: none;
+    background: #6b8e45;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: #8fbd6b;
+}
+
+
+/* ========================================
+   FOOTER BOTTOM
+======================================== */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    padding: 18px 20px;
+}
+
+.footer-bottom p {
+    color: #aebbb1;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 45px 25px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .search-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hotel-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-detail-image {
+        height: 350px;
+    }
+
+    .category-grid,
+    .hotel-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid,
+    .hotel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+
+    .hotel-detail-info h1 {
+        font-size: 32px;
+    }
+
+    .booking-form {
+        padding: 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .nav-container {
+        min-height: 68px;
+    }
+
+    .logo-main {
+        font-size: 26px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content {
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        text-align: center;
+    }
+
+    .categories,
+    .popular-hotels {
+        padding: 70px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .page-content {
+        padding: 60px 0;
+    }
+
+    .page-header {
+        padding: 60px 0;
+    }
+
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+    .hotel-detail {
+        padding: 20px;
+    }
+
+    .hotel-detail-image {
+        height: 250px;
+    }
+}
+
+/*=======
+Booking ========*/
+.field-error{
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
